@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand
 {
-    class Day
+    class Items
     {
-        public Weather weather;
+        int item = 0;
 
-        public Day()
-        {
-            weather = new Weather();
-        }
-        public void DayOfWeek()
+        public void initialPurchase()
         {
 
         }
 
+        public void productRemaining()
+        {
+
+        }
+
+        public void finalInventory()
+        {
+
+        }
     }
 }

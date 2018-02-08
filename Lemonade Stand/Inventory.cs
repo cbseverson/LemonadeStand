@@ -8,5 +8,30 @@ namespace Lemonade_Stand
 {
     class Inventory
     {
+        public int cups;
+        public int sugar;
+        public int lemons;
+        public int ice;
+
+        public void remainingCups()
+        {
+           
+        }
+
+        public void remainingSugar()
+        {
+
+        }
+        public void remainingLemons()
+        {
+
+        }
+        public void remainingIce()
+        {
+
+        }
+
+
+
     }
 }

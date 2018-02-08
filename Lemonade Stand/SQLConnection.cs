@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand
 {
-    class Store
+    class SQLConnection
     {
-        int lemons;
-        int sugar;
-        int ice;
-        int cups;
 
-        //customer interacts with the store
     }
 }

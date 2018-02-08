@@ -8,5 +8,6 @@ namespace Lemonade_Stand
 {
     class Customer
     {
+        //store information about customers that purchase
     }
 }

@@ -10,7 +10,7 @@ namespace Lemonade_Stand
     {
         static void Main(string[] args)
         {
-            //run program
+            //RunGame run = new RunGame(); 
         }
     }
 }

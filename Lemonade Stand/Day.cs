@@ -16,7 +16,7 @@ namespace Lemonade_Stand
         }
         public void DayOfWeek()
         {
-
+            //do I need the day class? 
         }
 
     }

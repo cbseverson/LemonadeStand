@@ -8,50 +8,61 @@ namespace Lemonade_Stand
 {
     class Weather
     {
-        public string Monday;
-        public string Tuesday;
-        public string Wednesday;
-        public string Thursday;
-        public string Friday;
-        public string Saturday;
-        public string Sunday;
+        public int Temperature;
+        public string weather;
+        Random random = new Random(); 
 
 
         public void DisplayWeather()
         {
+            UserInterface.userForecastDate();
             //display the forecast or actual?
         }
         public void forecast(int day)
         {
-            switch (day){ 
-          
-                case 1:
-                        Console.WriteLine("The weather on Monday is sunny and 80 degrees");
-                break;
-                case 2:
-                    Console.WriteLine("The weather on Tuesday is rainy and 60 degrees");
-                break;
-                case 3:
-                    Console.WriteLine("The weather on Wednesday is sunny and 60 degrees");
-                break;
-                case 4:
-                    Console.WriteLine("The weather on Thursday is sunny and 90 degrees");
-                break;
-                case 5:
-                    Console.WriteLine("The weather on Friday is rainy and 70 degrees");
-                    break;
-                case 6:
-                    Console.WriteLine("The weather on Saturday is overcast and 80 degrees");
-                break;
-                case 7:
-                    Console.WriteLine("The weather on Sunday is sunny and 70 degrees");
-                break;
+            var choice = random.Next() * 100;
+            if (choice > 20)
+            {
+                Temperature = 50;
+                weather = "Sunny";
+            }
+            else if (choice > 40)
+            {
+                Temperature = 60;
+                weather = "Sunny";
+            }
+            else if (choice > 60)
+            {
+                Temperature = 70;
+                weather = "Rain";
+            }
+            else if (choice > 80)
+            {
+                Temperature = 60;
+                weather = "Rain";
+            }
+            else if (choice <= 100)
+            {
+                Temperature = 80;
+                weather = "Sunny";
             }
         }
 
-        public void actualWeather()
+        public void actualWeather(int day)
         {
-            //link to an API 
+            var actual = random.Next() * 100;
+            if (actual > 15)
+            {
+
+            }
+            else if (actual > 30)
+            {
+
+            }
+            else if (actual > 50)
+            {
+
+            }
         }
     }
 }

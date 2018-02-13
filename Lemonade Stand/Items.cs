@@ -8,18 +8,18 @@ namespace Lemonade_Stand
 {
     class Items
     {
-        int item = 0;
+        protected double cost;
+        public string names;
 
-        public void initialPurchase()
+        public double GetCost()
+        {
+            return cost;
+        }
+
+        public void PurchaseItem(Wallet wallet)
         {
 
         }
-
-        public void productRemaining()
-        {
-
-        }
-
         public void finalInventory()
         {
 

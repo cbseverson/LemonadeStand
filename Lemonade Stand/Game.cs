@@ -8,24 +8,28 @@ namespace Lemonade_Stand
 {
     class Game
     {
- 
+        Player player;
+        Store store;
+        Inventory inventory;
+        Customer customer;
+        UserInterface Ui = new UserInterface();
+
         public void RunGame()
         {
-            int numberOfDays = GetDays();
-            for(int i = 1; i < numberOfDays; i++)
+            player = Ui.userStartsGame();
+            store = new Store(player);
+            for(int i = 1; i < player.GetDays(); i++)
             {
                 Day day = new Day();
                 day.weather.DisplayWeather();
-                Player player = new Player();
+                Player.CostPerCup();
                 //user decides what to charge per cup - player class? 
-
-                //user decides what to purchase in inventory - player class? 
+                Inventory.RemainingInventory();
+                //user decides what to purchase in inventory - store class? 
+                Customer.CustomerCups();
                 //weather determines how many cups are sold - customer class, depends on customer preference
-                //price of the product changes how many people purchase - which class? 
                 //user learns how many cups they sold - profit/loss - player class
                 //user learns how much inventory they have left - inventory class
-
-                //game loops based on days decided - should user decide that in user interface? 
             }
         }
     }

@@ -8,30 +8,20 @@ namespace Lemonade_Stand
 {
     class Inventory
     {
-        public int cups;
-        public int sugar;
-        public int lemons;
-        public int ice;
-
-        public void remainingCups()
+        public List<Lemon>lemon;
+        public List<Sugar>sugar;
+        public List<Ice>ice;
+        public List<Cup>cup;
+        public Inventory()
         {
-           
+            lemon = new List<Lemon>();
+            sugar = new List<Sugar>();
+            ice = new List<Ice>();
+            cup = new List<Cup>();
         }
-
-        public void remainingSugar()
+        public void remainingInventory()
         {
-
+            UserInterface.userRemainingInventory(lemon.Count, sugar.Count, ice.Count, cup.Count);
         }
-        public void remainingLemons()
-        {
-
-        }
-        public void remainingIce()
-        {
-
-        }
-
-
-
     }
 }

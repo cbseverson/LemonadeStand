@@ -8,35 +8,36 @@ namespace Lemonade_Stand
 {
     class UserInterface
     {
-        public void userStartsGame() {
+        public Player userStartsGame() {
             Console.WriteLine("Welcome to the Lemonade Stand: Open your own and try to make a profit. Your customers will purchase based on taste, weather, and cost");
             Player player = new Player();
             player.GetDays();
-            //forecast should be here
+            Weather weather = new Weather();
+            weather.DisplayWeather();
             player.CostPerCup();
-
+            return player;
         }
 
-        public void userForecastDate() {
-            Console.WriteLine("Today is BLANK and the weather forecast is BLANK");
+        static public void userForecastDate(int temp, string weather) {
+            Console.WriteLine($"The forecast is {temp} degrees and {weather}");
         }
 
-        public void userPurchase() {
-            Console.WriteLine("How many lemons do you want to buy? /n They cost $0.50 each");
-            Console.WriteLine("How many ice cubes do you want to buy? /n A bag of 100 costs $2.00");
-            Console.WriteLine("How many cups do you want to buy? /n A package of 25 costs $3.00");
-            Console.WriteLine("How much sugar do you want to buy? /n Each bag costs $1.00");
+        static public string userPurchase(Items item) {
+            Console.WriteLine($"How many {item.names} do you want to buy? /n They cost {item.GetCost()} each");
+            return Console.ReadLine();
         }
 
-        public void userRemainingInventory()
+        static public void userRemainingInventory(int lemon, int sugar, int ice, int cup)
         {
-            Console.WriteLine("You have BLANK lemons remaining");
-            Console.WriteLine("You have BLANK ice cubes remaining");
-            Console.WriteLine("You have BLANK cups remaining");
-            Console.WriteLine("You have BLANK sugar remaining");
+            Console.WriteLine($"You have {lemon} lemons remaining");
+            Console.WriteLine($"You have {ice} ice cubes remaining");
+            Console.WriteLine($"You have {cup} cups remaining");
+            Console.WriteLine($"You have {sugar} sugar remaining");
 
         }
-
-        
+        public void userProfitLoss()
+        {
+            Console.WriteLine("You made BLANK today. Your total profit so far is BLANK");
+        }       
     }
 }
